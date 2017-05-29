@@ -1,0 +1,43 @@
+<!--
+	ToDo.HTML
+			-->
+<!doctype html5>
+
+<html>
+	<head>	
+	</head>
+	<body>
+			<header>	
+				<h1 class ='logo'><a href ='#'><span>T</span>o<span>D</span>o Manager</a></h1>
+			</header>		
+			<form class = 'todoForm'>				
+				<label for = 'taskDate'>Task Date:</label>
+				<input type = 'date' id = 'taskDate' >
+				<label for = 'taskName'>Task Name:</label>
+				<input id = 'taskName' class = 'inputext'> 
+				<label for = 'taskPriority'>Task Priority:</label>
+				<select id='prioritySel' class = 'inputext'>
+					<option></option>
+					<option id = '1'>Low</option>
+					<option id = '2'>Medium</option>
+					<option id = '3'>Top</option>
+				</select>
+				<label for = 'taskDetails'>Task Details:</label>
+				<input id = 'taskDetails' class = 'inputext'>
+				<br/><br/>
+				<button type='button' id = 'cmdAddTask'>Add Task</button>
+				<button type='button' id = 'cmdClearForm'>Clear Form</button>
+				<button type='button' id = 'cmdClearDB'>Clear Task List</button><br>
+				<input type='radio' name='view' id='today' value='today'> 
+				<label for=today><span></span>Today Tasks</label>
+				<input type='radio' name='view' id='alltasks' value='alltasks' checked='checked'>  
+				<label for=alltasks><span></span>All Tasks</label>
+			</form>
+			<div class = 'taskList'>
+			<div id = 'title'>Today Tasks</div>
+			<table id = 'list'><tr><th id = 'numCol'>No.</th><th>Name<span  id = 'cmdSortByName' class = 'filterIMG'></span></th><th>Due Date<span class = 'filterIMG' id = 'cmdSortByDate'></span></th><th>Priority<span class = 'filterIMG' id ='cmdSortByPriority'></span></th><th>Edit/View</th><th>Remove</th><th id = 'priorityIMG'></th></tr></table>
+			<div id='noTable'>No Tasks to show</div>
+			<p>&copy; 2017 Roy Shani<p>
+			</div>	
+	</body>
+</html>
